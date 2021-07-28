@@ -33,11 +33,9 @@ li {
 
 .btn {
     position: absolute;
-    top: 20px;
-    left: 250px;
     height: 50px;
     width: 50px;
-    border-radius: 50%;
+    border-radius: 5%;
     border: none;
     color: var(--btnFontColor);
     background-color: var(--btnBg);
@@ -85,4 +83,16 @@ header{
 .icon {
     width: 44px;
     height: 44px;
+}
+.topnav {
+    position: relative;
+    padding: 15px;
+    text-decoration: none;
+    border-radius: 15%;
+    margin: 60px;
+    top: -20px;
+    background: transparent;
+}
+.topnav:hover {
+    background: var(--black);
 }
