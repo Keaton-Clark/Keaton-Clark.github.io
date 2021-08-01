@@ -12,20 +12,28 @@
 <body class="theme">
     <header>
         <nav class="header">
-                <a href="index.html"><img width="60" height="50" src="./Assets/nautilus.png"></a>
-                <a class="topnav" href="index.html">About Me</a>
-                <a class="topnav" href="projects.html">Projects</a>
-                <a class="topnav" href="snake.html">Snake</a>
+            <a href="index.html"><img width="60" height="50" src="./Assets/nautilus.png"></a>
+            <a class="topnav" href="index.html">About Me</a>
+            <a class="topnav" href="projects.html">Projects</a>
+            <a class="topnav" href="snake.html">Snake</a>
         </nav>
     </header>
+    <div class="slidecontainer1">
+        <input type="range" min="1" max="100" value="2" class="slider" id="speedRange">
+        <p>Value: <span id="speedOutput"></span></p>
+    </div>
     <canvas id="snakeboard" width="400" height="400"></canvas>
+    <div class="slidecontainer2">
+        <input type="range" min="0" max="2" value="2" class="slider" id="gameRange">
+        <p><span id="gameOutput"></span></p>
+    </div>
 </body>
 
 <script src="snake.js"></script>
 
 <footer>
     <div class="footer">
-        <a href="./Assets/Keaton_Clark.pdf"><img class="icon" src="./Assets/resume-icon.png" target="_blank"
+        <a href="./Assets/Resume/Keaton_Clark.pdf"><img class="icon" src="./Assets/resume-icon.png" target="_blank"
                 rel="noopener noreferrer"></a>
         <a href="https://github.com/Keaton-Clark"><img class="icon" src="./Assets/github-icon.png" target="_blank"
                 rel="noopener noreferrer"></a>
