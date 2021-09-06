@@ -1,4 +1,3 @@
-
 MST = [];
 sortedMST = [];
 path = [
