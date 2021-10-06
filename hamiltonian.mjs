@@ -1,18 +1,18 @@
 import { MST } from "./minimumSpanningTree.mjs";
 import { MSTGenerator } from "./minimumSpanningTree.mjs";
-let width = 4;
-let height = 4;
+import { height } from "./snake.js";
+import { width } from "./snake.js";
 
-let path = [
+export let path = [
     [0, 0],
     [1, 0]
 ];
 
-MSTGenerator(width/2,height/2);
-pathFinding(width, height);
 
 
-function pathFinding(width, height) {
+
+export function pathFinding(width, height) {
+    MSTGenerator(width/2,height/2);
     let KEEP_GOING = true;
     var curr = path[path.length-1];
     var past = path[path.length-2];
@@ -24,6 +24,9 @@ function pathFinding(width, height) {
         }
         else if(!checkRight(curr, past)) {
             right(curr, past);
+        }
+        else if(checkStraight(curr, past)) {
+            left(curr, past);
         }
         else {
             straight(curr, past);
@@ -43,12 +46,16 @@ function pathFinding(width, height) {
 
 function straight(curr, past) {
     path.push([curr[0]+(curr[0]-past[0]), curr[1]+(curr[1]-past[1])]);
-    console.log("straight");
+    //console.log("straight");
 }
 
 function right(curr, past) {
     path.push([(curr[0]-(curr[1]-past[1])), curr[1]+(curr[0]-past[0])]);
-    console.log("right");
+    //console.log("right");
+}
+
+function left(curr, past) {
+    path.push([(curr[0]+(curr[1]-past[1])), curr[1]-(curr[0]-past[0])]);
 }
 
 function checkRight(curr, past) {
@@ -56,12 +63,31 @@ function checkRight(curr, past) {
     let initial = [Math.floor((curr[0]-(dirRight[1]-curr[1]))/2), Math.floor((curr[1]+(dirRight[0]-curr[0]))/2)];
     let final = [Math.floor((curr[0]+(dirRight[1]-curr[1]))/2), Math.floor((curr[1]-(dirRight[0]-curr[0]))/2)];
     if (initial[0] <= final[0] && initial[1] <= final[1]) {
-        console.log(curr, dirRight, "|", initial, final);
+        //console.log(curr, dirRight, "|", initial, final);
         return MST[searchMST(initial, final)].connect;
     }
     else {
-        console.log(curr, dirRight, "|", final, initial);
+        //console.log(curr, dirRight, "|", final, initial);
         return MST[searchMST(final, initial)].connect;
+    }
+}
+
+function checkStraight(curr, past) {
+    let dirStraight = [curr[0]+(curr[0]-past[0]), curr[1]+(curr[1]-past[1])];
+    if (dirStraight[0] == 0 && curr[0] == 0 || dirStraight[1] == 0 && curr[1] == 0 || dirStraight[0] == width-1 && curr[0] == width-1 || dirStraight[1] == height-1 && curr[1] == height-1) {
+        return false;
+    }
+    else {
+        let initial = [Math.floor((curr[0]-(dirStraight[1]-curr[1]))/2), Math.floor((curr[1]+(dirStraight[0]-curr[0]))/2)];
+        let final = [Math.floor((curr[0]+(dirStraight[1]-curr[1]))/2), Math.floor((curr[1]-(dirStraight[0]-curr[0]))/2)];
+        if (initial[0] <= final[0] && initial[1] <= final[1]) {
+            //console.log(curr, dirStraight, "|", initial, final);
+            return MST[searchMST(initial, final)].connect;
+        }
+        else {
+            //console.log(curr, dirStraight, "|", final, initial);
+            return MST[searchMST(final, initial)].connect;
+        }
     }
 }
 
