@@ -8,7 +8,7 @@
 
 * {
     color: var(--fontColor);
-    font-family: helvetica;
+    font-family: monospace;
     font-size: 16px;
 }
 
@@ -157,7 +157,7 @@ header{
     margin-bottom: 10px;
     line-height: 10px;
     align-items: center;
-    margin-top: 0px;
+    margin-top: 40px;
     justify-content: center;
 
   }
@@ -169,12 +169,18 @@ header{
     width: 25%;
     height: 500px;
     float: left;
-    margin: 5%;
-    margin-bottom: 20px;
+    margin: 2%;
     justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-weight: bold;
+    vertical-align: center;
+    text-decoration: none;
+    color: var(--lightGrey);
   }
   .card-background {
     border-radius: 25px;
-    width: 98%;
-    padding: 1%;
+    width: 100%;
+    padding: 0%;
+    height: 90%;
   }
