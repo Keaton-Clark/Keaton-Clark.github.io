@@ -170,9 +170,9 @@ header{
 	border: 5px solid var(--lightGrey);
 	border-radius: 25px;
 	background-size: cover;
-	background-image: url(../../assets/);
+	background-image: url(../../assets/snake.png);
 	width: 25%;
-	height: 500px;
+	height: 600px;
 	float: left;
 	margin: 2%;
 	justify-content: center;
@@ -180,7 +180,6 @@ header{
 	text-align: center;
 	text-decoration: none;
 	color: transparent;
-
 }
 .project-card-snake:hover {
 	background-color: var(--black);
@@ -192,17 +191,16 @@ header{
 	border: 5px solid var(--lightGrey);
 	border-radius: 25px;
 	background-size: cover;
-	background-image: url(../../assets/);
+	background-image: url(../../assets/CS.gif);
 	width: 25%;
-	height: 500px;
 	float: left;
+	height: 600px;
 	margin: 2%;
 	justify-content: center;
 	align-items: center;
 	text-align: center;
 	text-decoration: none;
 	color: transparent;
-
 }
 .project-card-CS-1:hover {
 	background-color: var(--black);
@@ -213,10 +211,10 @@ header{
 	border: 5px solid var(--lightGrey);
 	border-radius: 25px;
 	background-size: cover;
-	background-image: url(../../assets/);
+	background-image: url(../../assets/calcpp.png);
 	padding: 10px;
 	width: 25%;
-	height: 500px;
+	height: 600px;
 	float: left;
 	margin: 2%;
 	justify-content: center;
@@ -224,7 +222,6 @@ header{
 	text-align: center;
 	text-decoration: none;
 	color: transparent;
-
 }
 .project-card-calcpp:hover {
 	background-color: var(--black);
@@ -236,10 +233,10 @@ header{
 	border: 5px solid var(--lightGrey);
 	border-radius: 25px;
 	background-size: cover;
-	background-image: url(../../assets/);
+	background-image: url(../../assets/tmplt.png);
 	padding: 10px;
 	width: 25%;
-	height: 500px;
+	height: 600px;
 	float: left;
 	margin: 2%;
 	justify-content: center;
@@ -286,6 +283,9 @@ header{
 
 
 .pill-container {
+	background-color: yellow;
+	position: relative;
+	background-color: red;
 	flex-direction: row;
 	flex-wrap: wrap;
 	margin: 10px;
