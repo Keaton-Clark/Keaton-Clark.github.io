@@ -191,7 +191,7 @@ header{
 	border: 5px solid var(--lightGrey);
 	border-radius: 25px;
 	background-size: cover;
-	background-image: url(../../assets/CS.gif);
+	background-image: url(assets/CS.gif);
 	width: 25%;
 	float: left;
 	height: 600px;
