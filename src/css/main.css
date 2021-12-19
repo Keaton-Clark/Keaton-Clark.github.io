@@ -170,7 +170,7 @@ header{
 	border: 5px solid var(--lightGrey);
 	border-radius: 25px;
 	background-size: cover;
-	background-image: url(../../assets/snake.png);
+	background-image: url(https://keaton-clark.github.io/assets/snake.png);
 	width: 25%;
 	height: 600px;
 	float: left;
@@ -191,7 +191,7 @@ header{
 	border: 5px solid var(--lightGrey);
 	border-radius: 25px;
 	background-size: cover;
-	background-image: url(assets/CS.gif);
+	background-image: url(https://keaton-clark.github.io/assets/CS.gif);
 	width: 25%;
 	float: left;
 	height: 600px;
@@ -211,7 +211,7 @@ header{
 	border: 5px solid var(--lightGrey);
 	border-radius: 25px;
 	background-size: cover;
-	background-image: url(../../assets/calcpp.png);
+	background-image: url(https://keaton-clark.github.io/assets/calcpp.png);
 	padding: 10px;
 	width: 25%;
 	height: 600px;
@@ -233,7 +233,7 @@ header{
 	border: 5px solid var(--lightGrey);
 	border-radius: 25px;
 	background-size: cover;
-	background-image: url(../../assets/tmplt.png);
+	background-image: url(https://keaton-clark.github.io/assets/tmplt.png);
 	padding: 10px;
 	width: 25%;
 	height: 600px;
