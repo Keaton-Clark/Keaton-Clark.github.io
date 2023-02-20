@@ -1,5 +1,5 @@
-let width = 40;
-let height = 40;
+let width = 20;
+let height = 20;
 
 let path = [
 	[0, 0],
@@ -182,13 +182,7 @@ function change_direction_AI(dir) {
 
 
 function tickSpeed() {
-	var slider = document.getElementById("speedRange");
-	var output = document.getElementById("speedOutput");
-	output.innerHTML = parseInt(slider.value) // Display the default slider value
-	slider.oninput = function () {
-		output.innerHTML = this.value;
-	}
-	return 1000 / slider.value;
+	return 20;
 }
 
 
